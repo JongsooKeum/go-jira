@@ -229,13 +229,14 @@ type IssueRenderedFields struct {
 // IssueType represents a type of a Jira issue.
 // Typical types are "Request", "Bug", "Story", ...
 type IssueType struct {
-	Self        string `json:"self,omitempty" structs:"self,omitempty"`
-	ID          string `json:"id,omitempty" structs:"id,omitempty"`
-	Description string `json:"description,omitempty" structs:"description,omitempty"`
-	IconURL     string `json:"iconUrl,omitempty" structs:"iconUrl,omitempty"`
-	Name        string `json:"name,omitempty" structs:"name,omitempty"`
-	Subtask     bool   `json:"subtask,omitempty" structs:"subtask,omitempty"`
-	AvatarID    int    `json:"avatarId,omitempty" structs:"avatarId,omitempty"`
+	Self          string `json:"self,omitempty" structs:"self,omitempty"`
+	ID            string `json:"id,omitempty" structs:"id,omitempty"`
+	Description   string `json:"description,omitempty" structs:"description,omitempty"`
+	IconURL       string `json:"iconUrl,omitempty" structs:"iconUrl,omitempty"`
+	Name          string `json:"name,omitempty" structs:"name,omitempty"`
+	Subtask       bool   `json:"subtask,omitempty" structs:"subtask,omitempty"`
+	AvatarID      int    `json:"avatarId,omitempty" structs:"avatarId,omitempty"`
+	HierachyLevel int    `json:"hierarchyLevel" structs:"hierarchyLevel,omitempty"`
 }
 
 // Watches represents a type of how many and which user are "observing" a Jira issue to track the status / updates.
